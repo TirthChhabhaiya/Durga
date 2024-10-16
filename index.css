@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap');
+
+/* Basic reset for default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D8D2C6;
+}
+
+/* Header styles */
+/*header {
+    position: relative; /* Allows for absolute positioning of child elements 
+    height: 60px;
+}*/
+
+nav{
+    display: flex; /* Flex layout for logo and menu */
+    align-items: center; /* Center items vertically */
+    background-color: #D8D2C6; /* Background color of nav */
+
+}
+
+.logo img {
+    height: 60px; /* Adjust height of logo */
+    vertical-align: middle; /* Align logo with text */
+    width: 150px;
+    margin-left: 40px;
+}
+
+ul.main-menu {
+    display: flex;
+    margin-left: auto; /* Pushes menu to the right */
+    margin-right: 0; /* Remove extra margin */
+    align-items: center; /* Align items vertically */
+}
+
+ul.main-menu li {
+    margin: 0 15px; /* Reduce margin for a more compact menu */
+}
+
+ul.main-menu a {
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+}
+
+/* Hover effect for links */
+ul.main-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lightens background on hover */
+}
+
+/* Hamburger Menu (smaller size) 
+.ham-menu {
+    height: 30px; /* Reduced height 
+    width: 25px;  /* Reduced width 
+    margin-left: 15px; /* Closer to the menu 
+    position: relative;
+    cursor: pointer;
+    margin-right: 15px;
+    background: none; /* Remove button default background 
+    border: none; /* Remove default button border 
+    padding: 0; /* Remove default padding 
+}
+ Styling for the hamburger lines 
+.ham-menu span {
+    height: 3px; /* Thinner lines 
+    width: 100%;
+    background-color: black; /* Color of the lines 
+    border-radius: 25px; /* Rounded edges for lines 
+    position: absolute; /* Positioning of lines 
+    left: 50%; /* Centering lines 
+    transform: translateX(-50%); /* Centering adjustment 
+    transition: 0.3s ease; /* Smooth transition 
+}
+
+/* Positioning of the hamburger lines 
+.ham-menu span:nth-child(1) {
+    top: 25%; /* Top line position 
+}
+.ham-menu span:nth-child(2) {
+    top: 50%; /* Middle line position 
+}
+.ham-menu span:nth-child(3) {
+    top: 75%; /* Bottom line position 
+}
+
+/* Active Class Styles for Hamburger 
+.ham-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Rotate top line 
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0; /* Hide middle line 
+}
+
+.ham-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotate bottom line 
+}
+*/
+
+/*Section A*/
+.img {
+    align-items: center; /* Center the image vertically if height is set */
+    width: calc(100% - 80px); /* Full viewport width minus the right margin */
+    height: auto; /* Maintain aspect ratio */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Required for absolute positioning of overlay */
+    border-radius: 30px 30px 30px 30px; /* top-left, top-right, bottom-right, bottom-left */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.img img {
+    width: 100vw; /* Make the image take full width of the viewport */
+    height: 80vh; /* Set height as a percentage of the viewport height */
+    display: block; /* Remove any space below the image caused by inline-block */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+}
+
+
+.overlay {
+    position: absolute; /* Position overlay absolutely within the img container */
+    top: 0; /* Start from the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover full width of the container */
+    height: 66.66vw; /* Cover full height of the container */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1; /* Ensure overlay is above the image */
+    margin-top: 0px;
+    border-radius: 20px; /* Match the border-radius of the image */
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5vw; /* Font size relative to the viewport width */
+    text-align: center;
+    z-index: 2;
+}
+
+
+/*Section B*/
+.video {
+    background-color: #FFFFFF;
+    display: flex; /* Enable flexbox for horizontal alignment */
+    align-items: flex-start; /* Align items vertically at the top */
+    border-radius: 30px 30px 30px 30px; /* top-left, top-right, bottom-right, bottom-left */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.video video {
+    height: 10%;
+    max-width: 50%;
+    border-radius:  15px 15px ;/* top-left, top-right, bottom-right, bottom-left */
+}
+
+.video .content { 
+    display: flex;
+    flex-direction: column; /* Stack h1 and p vertically */
+    justify-content: flex-start; /* Align them to the top */
+    padding-left: 60px; /* Space between video and text */
+    padding-top: 50px;
+}
+
+.video h1 {
+    color: black;
+    padding-bottom: 30px; /* Space between h1 and p */
+    padding-top: 50px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect on h1 */
+.video h1:hover {
+    color: #FF6347; /* Change to tomato color on hover */
+    transform: translateY(-5px); /* Move slightly up */
+}
+
+.video p {
+    color: black;
+    margin-top: 0; /* Remove extra space */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect on p tag */
+.video p:hover {
+    color: #FF6347; /* Change to tomato color on hover */
+    transform: translateY(3px); /* Move slightly down */
+}
+
+
+/*Section B*/
+
+.Project {
+    background-color: #BB9F81;
+    height: 630px;
+    border-radius: 30px;
+    margin: 30px 40px 10px 40px;
+    padding: 20px;
+}
+
+.Project h1 {
+    text-decoration: none;
+    color:#3B3A3A;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* Container to handle image layout */
+.images-container {
+    display: flex;
+    justify-content: space-around; /* Changes spacing between images */
+    gap: 1px; /* Add a gap between images (optional) */
+    margin-top: 20px;
+}
+
+/* Image styling */
+.min1 img, .min2 img, .min3 img, .min4 img {
+    width: 270px;
+    height: 360px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* Optional: adjust margin for specific image containers (not the image itself) */
+.min2, .min4 {
+    margin-top: 140px; /* Adjust position for the container instead of the image */
+}
+
+/* Common styles for image overlays */
+.image-overlay {
+    position: relative;
+    width: 270px;
+    height: 360px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures image fits within rounded corners */
+}
+
+/* Semi-transparent overlay for the images */
+.image-overlay::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: 1; /* Ensure it stays above the image but below the text */
+    border-radius: 30px; /* Match border-radius */
+}
+
+/* Add specific image containers */
+.min1 .image-overlay1,
+.min2 .image-overlay2,
+.min3 .image-overlay3,
+.min4 .image-overlay4 {
+    position: relative;
+}
+
+/* Add individual overlay for each image */
+.min1 .image-overlay1::before,
+.min2 .image-overlay2::before,
+.min3 .image-overlay3::before,
+.min4 .image-overlay4::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: 1; /* Ensure it stays above the image */
+    border-radius: 30px;
+}
+
+
+/* Overlay text styling */
+.overlay-text1 {
+    position: absolute;
+    justify-content: flex-start;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Ensure the text appears above both the image and overlay */
+    text-align: center;
+    pointer-events: none; /* Prevent interaction with the text */
+}
+
+.overlay-text2
+{
+    position: absolute;
+    justify-content: flex-start;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Ensure the text appears above both the image and overlay */
+    text-align: center;
+    pointer-events: none; /* Prevent interaction with the text */
+}
+
+.overlay-text3
+{
+    position: absolute;
+    justify-content: flex-start;
+    top: 90%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Ensure the text appears above both the image and overlay */
+    text-align: center;
+    pointer-events: none; /* Prevent interaction with the text */
+}
+
+.overlay-text4
+{
+    position: absolute;
+    justify-content: flex-start;
+    top: 90%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Ensure the text appears above both the image and overlay */
+    text-align: center;
+    pointer-events: none; /* Prevent interaction with the text */
+}
+
+/*footer*/
+
+footer {
+    background-color: #CDA17C; /* Match your site's color scheme */
+    color: white; /* Text color */
+    padding-bottom: 20px;
+    border-radius: 30px 30px 30px 30px; /* top-left, top-right, bottom-right, bottom-left */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 200px;
+}
+
+.footer-content {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out the footer content */
+    align-items: center; /* Center align items vertically */
+    max-width: 1200px; /* Max width for the footer */
+    margin: 0 auto; /* Center the footer */
+    padding: 0 20px; /* Padding for left and right */
+}
+
+.footer-links ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li {
+    display: inline; /* Display links inline */
+    margin: 0 15px; /* Spacing between links */
+}
+
+.footer-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-links p {
+    text-align: center; /* Center align text */ 
+    padding-top: 50px;
+}
+
+.footer-social a {
+    margin: 0 10px; /* Spacing between social icons */
+    color: black;
+    font-size: 1.5em; /* Increase the size of the icon */
+}
+
+.footer-social a i {
+    font-size: inherit; /* Optional, inherit size from anchor tag */
+}
+
+/* For tablets and larger mobile devices */
+@media (max-width: 768px) {
+    .logo img {
+        width: 120px; /* Reduce logo size */
+    }
+
+    ul.main-menu {
+        display: none; /* Hide the main menu by default */
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust the top position to be below the header */
+        left: 0;
+        background-color: #D8D2C6; /* Set background color */
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+
+    ul.main-menu.show-menu,
+    ul.main-menu.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    ul.main-menu li {
+        margin: 0 10px; /* Reduce spacing between menu items */
+    }
+
+    ul.main-menu a {
+        padding: 8px; /* Adjust padding */
+    }
+
+    .img {
+        margin-left: 10px; /* Adjust left margin to reduce gap */
+        margin-right: 10px; /* Adjust right margin to reduce gap */
+        width: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .overlay-text {
+        font-size: 6vw; /* Adjust font size */
+    }
+
+    .video {
+        flex-direction: column; /* Stack video and content vertically */
+        align-items: center; /* Center items */
+        margin-left: 10px; /* Adjust margins */
+        margin-right: 10px; /* Adjust margins */
+    }
+
+    .video video {
+        max-width: 100%; /* Make video responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .video .content {
+        padding-left: 0; /* Remove left padding */
+        padding-top: 20px; /* Adjust top padding */
+    }
+
+    footer {
+        margin-left: 10px; /* Adjust footer margins */
+        margin-right: 10px; /* Adjust footer margins */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer content vertically */
+        align-items: center; /* Center footer items */
+    }
+
+    .footer-links ul {
+        display: flex; /* Display links in a row */
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    .footer-links li {
+        margin: 5px 0; /* Adjust spacing between links */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px; /* Further reduce logo size */
+    }
+
+    ul.main-menu li {
+        margin: 0 5px; /* Further reduce spacing */
+    }
+
+    ul.main-menu a {
+        padding: 5px; /* Adjust padding */
+    }
+
+    .overlay {
+        height: 552px; /* Adjust height as needed */
+        /* You can change the height percentage based on your preference */
+    }
+
+    .overlay-text {
+        font-size: 8vw; /* Further adjust font size */
+    }
+
+    .video h1 {
+        font-size: 20px; /* Adjust heading font size */
+        margin: 0; /* Remove margin to eliminate gap */
+        padding: 0; /* Remove padding if any */
+    }
+
+    .video p {
+        font-size: 16px; /* Adjust paragraph font size */
+        border-radius: 30px 30px 30px 30px; /* top-left, top-right, bottom-right, bottom-left */
+    }
+
+    footer {
+        height: auto; /* Allow footer to expand */
+        padding: 20px; /* Add padding */
+        margin-left: 10px; /* Adjust footer margins */
+        margin-right: 10px; /* Adjust footer margins */
+    }
+    
+    .footer-links ul {
+        margin-bottom: -23px;
+    }
+
+    .footer-links p {
+        padding-bottom: 10px;
+    }
+
+    .footer-social a {
+        font-size: 1.2em; /* Adjust social icon size */
+    }
+}
+
+/*section B Media Qureris*/
+/* For tablets and larger mobile devices */
+/* For tablets and larger mobile devices */
+@media (max-width: 768px) {
+    .Project {
+        height: auto; /* Allow height to adjust based on content */
+        margin: 20px 20px; /* Adjust margins */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .Project h1 {
+        font-size: 22px; /* Adjust heading font size */
+        margin-left: 5px; /* Adjust left margin */
+    }
+
+    .images-container {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images */
+    }
+
+    .min1 img, .min2 img, .min3 img, .min4 img {
+        width: 90%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space between images */
+        border-radius: 30px; /* Ensure rounded corners */
+    }
+
+    .overlay-text1,
+    .overlay-text2,
+    .overlay-text3,
+    .overlay-text4 {
+        font-size: 20px; /* Adjust font size for overlays */
+        top: 80%; /* Adjust vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center text */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .Project {
+        height: auto; /* Allow height to adjust based on content */
+        margin: 10px; /* Further reduce margins */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .Project h1 {
+        font-size: 18px; /* Further adjust heading font size */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .images-container {
+        flex-direction: column; /* Ensure images stack vertically */
+        align-items: center; /* Center images */
+    }
+
+    .min1 {
+        position: relative; /* Ensure that overlay text is positioned correctly */
+        width: 100%; /* Make container full width */
+        margin-bottom: -120px; /* Add space between images */
+        border-radius: 30px; /* Ensure rounded corners */
+        overflow: hidden; /* Ensure overlay fits within rounded corners */
+        height: 230px;
+    }
+
+    .min2 {
+        position: relative; /* Ensure that overlay text is positioned correctly */
+        width: 100%; /* Make container full width */
+        margin-bottom: -135px; /* Add space between images */
+        border-radius: 30px; /* Ensure rounded corners */
+        overflow: hidden; /* Ensure overlay fits within rounded corners */
+        height: 400px;
+    }
+    .min3{
+        position: relative; /* Ensure that overlay text is positioned correctly */
+        width: 100%; /* Make container full width */
+        margin-bottom: 10px; /* Add space between images */
+        border-radius: 30px; /* Ensure rounded corners */
+        overflow: hidden; /* Ensure overlay fits within rounded corners */
+        height: 230px;
+    }
+    .min4 {
+        position: relative; /* Ensure that overlay text is positioned correctly */
+        width: 100%; /* Make container full width */
+        margin-bottom: -10px; /* Add space between images */
+        border-radius: 30px; /* Ensure rounded corners */
+        overflow: hidden; /* Ensure overlay fits within rounded corners */
+        margin-top: 15px;
+    }
+
+    .min1 img, .min2 img, .min3 img, .min4 img {
+        width: 100%; /* Make images full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    /*overlay text*/
+    .overlay-text1 {
+        position: absolute; /* Position overlay absolutely within the container */
+        color: white;
+        font-size: 16px; /* Further adjust font size for overlays */
+        top: 42%; /* Adjust vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center text */
+        z-index: 2; /* Ensure the text appears above the overlay */
+        text-align: center; /* Center text */
+        pointer-events: none; /* Prevent interaction with the text */
+    }
+    .overlay-text2 {
+        position: absolute; /* Position overlay absolutely within the container */
+        color: white;
+        font-size: 16px; /* Further adjust font size for overlays */
+        top: 85%; /* Adjust vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center text */
+        z-index: 2; /* Ensure the text appears above the overlay */
+        text-align: center; /* Center text */
+        pointer-events: none; /* Prevent interaction with the text */
+    } 
+    .overlay-text3 {
+        position: absolute; /* Position overlay absolutely within the container */
+        color: white;
+        font-size: 16px; /* Further adjust font size for overlays */
+        top: 36%; /* Adjust vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center text */
+        z-index: 2; /* Ensure the text appears above the overlay */
+        text-align: center; /* Center text */
+        pointer-events: none; /* Prevent interaction with the text */
+    } 
+    .overlay-text4 {
+        position: absolute; /* Position overlay absolutely within the container */
+        color: white;
+        font-size: 16px; /* Further adjust font size for overlays */
+        top: 85%; /* Adjust vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center text */
+        z-index: 2; /* Ensure the text appears above the overlay */
+        text-align: center; /* Center text */
+        pointer-events: none; /* Prevent interaction with the text */
+    }
+
+
+/*overlay for sectio B*/
+    .min1 .image-overlay1::before {
+        content: "";
+        position: absolute;
+        width: 100%; /* Ensure full width */
+        height: 400px; /* Ensure full height */
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+        z-index: 1; /* Ensure it stays below the text */
+        border-radius: 30px; /* Match border-radius */
+    }
+
+    .min2 .image-overlay2::before {
+        content: "";
+        position: absolute;
+        width: 100%; /* Ensure full width */
+        height: 240px; /* Ensure full height */
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+        z-index: 1; /* Ensure it stays below the text */
+        border-radius: 30px; /* Match border-radius */
+    }
+    .min3 .image-overlay3::before {
+        content: "";
+        position: absolute;
+        width: 100%; /* Ensure full width */
+        height: 230px; /* Ensure full height */
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+        z-index: 1; /* Ensure it stays below the text */
+        border-radius: 30px; /* Match border-radius */
+    }
+    .min4 .image-overlay4::before {
+        content: "";
+        position: absolute;
+        width: 100%; /* Ensure full width */
+        height: 247px; /* Ensure full height */
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+        z-index: 1; /* Ensure it stays below the text */
+        border-radius: 30px; /* Match border-radius */
+    }
+}
+
+
+
+
+
+
